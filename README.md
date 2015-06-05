@@ -9,7 +9,7 @@ This plugin differs from the 'official' one in the following ways:
  
  * For each host, sets the `ansible_ssh_host` variable using the public ip. This eliminates the need to reference hosts by their ip, or maintain your `/etc/hosts` file. You can then create another inventory file in the same directory, and reference the hosts by their EC2 Tag `Name`.
  
- * Returns host variables in the `_meta` top level element, reducing the number of api calls to Linode and speeding up the provisioning process. This eliminates the need to call the executable with `--host` for each host.
+ * Returns host variables in the `_meta` top level element, reducing the number of api calls to AWS and speeding up the provisioning process. This eliminates the need to call the executable with `--host` for each host.
  
  * Only makes 2 requests to the AWS API when called with `--list`.
  
